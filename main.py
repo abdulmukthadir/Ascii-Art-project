@@ -50,13 +50,7 @@ def grayscale_image(image):
 
 
 def pixels_to_ascii(image, invert=False):
-    """Map each pixel's brightness (0-255) to a character in ASCII_CHARS.
-
-    If invert=True, dark pixels get light characters (spaces/dots) and
-    bright pixels get heavy characters (@). This works well for dark
-    images viewed on a dark terminal background, since the background
-    becomes empty space instead of a solid block of @.
-    """
+   
     chars = ASCII_CHARS[::-1] if invert else ASCII_CHARS
     pixels = image.getdata()
     characters = "".join(
